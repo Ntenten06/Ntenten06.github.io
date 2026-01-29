@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #851056,
+        #161369,
+        #225252
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* การ์ด */
+.profile-card {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    width: 380px;
+    padding: 35px;
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.profile-card h1,
+.profile-card .role,
+.profile-card .desc,
+.profile-card .skills {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.profile-card h1 { animation-delay: 0.7s; }
+.profile-card .role { animation-delay: 0.85s; }
+.profile-card .desc { animation-delay: 1s; }
+.profile-card .skills { animation-delay: 1.15s; }
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* รูป */
+.profile-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00e5ff;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1976d2;
+    font-size: 22px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 999;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popUp {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+  
+    height: 45vh; 
+    background: linear-gradient(135deg, #eea112, #a7a7a7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero .line {
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin: 15px 0;
+    border-radius: 2px;
+    opacity: 0.9;
+}
+
+.hero .subtitle {
+    font-size: 16px;
+    letter-spacing: 2px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+.hero .desc {
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero h1,
+.hero p,
+.hero .line {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* CARD SECTION */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    background: white;
+    width: 240px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 16px;   /* 👈 จาก 50% */
+    margin-bottom: 15px;
+}
+
+
+.card span {
+    color: gray;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
